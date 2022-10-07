@@ -27,6 +27,12 @@ class SortTree:
         return list(filter(None,
                            [i for b in [cls.display(_node.left) if _node.left is not None else [getattr(_node.left, 'value', None)], [_node.value], cls.display(_node.right) if _node.right is not None else [getattr(_node.right, 'value', None)]] for i in b]))
 
+    # l = [i for i in list/tuple/dict] #
+    # este <=>
+    # l = []
+    # for i in list:
+    #     l.append(i)
+
 
 if __name__ == "__main__":
     tree = SortTree(4)
